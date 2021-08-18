@@ -281,7 +281,7 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 
 [node-fs]: https://nodejs.org/api/fs.html
 
-[@stdlib/fs/rmdir]: https://github.com/stdlib-js/stdlib
+[@stdlib/fs/rmdir]: https://github.com/stdlib-js/fs-rmdir
 
 </section>
 
