@@ -184,6 +184,8 @@ npm install -g @stdlib/fs-unlink
 
 </section>
 
+<!-- CLI usage documentation. -->
+
 <section class="usage">
 
 ### Usage
@@ -270,7 +272,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
