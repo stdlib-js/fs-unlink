@@ -1,0 +1,36 @@
+{
+  "name": "@stdlib/fs-unlink",
+  "version": "0.0.0",
+  "description": "Remove a directory entry.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./mod.js",
+  "homepage": "https://stdlib.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdlib-js/fs-unlink.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stdlib-js/stdlib/issues"
+  },
+  "keywords": [
+    "stdlib",
+    "stdfs",
+    "fs",
+    "unlink",
+    "unlinksync",
+    "path",
+    "async",
+    "sync",
+    "file",
+    "delete",
+    "remove",
+    "rm",
+    "del",
+    "filesystem"
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/athan"
+  }
+}
