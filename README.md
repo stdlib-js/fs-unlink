@@ -18,44 +18,48 @@ limitations under the License.
 
 -->
 
+
+<details>
+  <summary>
+    About stdlib...
+  </summary>
+  <p>We believe in a future in which the web is a preferred environment for numerical computation. To help realize this future, we've built stdlib. stdlib is a standard library, with an emphasis on numerical and scientific computation, written in JavaScript (and C) for execution in browsers and in Node.js.</p>
+  <p>The library is fully decomposable, being architected in such a way that you can swap out and mix and match APIs and functionality to cater to your exact preferences and use cases.</p>
+  <p>When you use stdlib, you can be absolutely certain that you are using the most thorough, rigorous, well-written, studied, documented, tested, measured, and high-quality code out there.</p>
+  <p>To join us in bringing numerical computing to the web, get started by checking us out on <a href="https://github.com/stdlib-js/stdlib">GitHub</a>, and please consider <a href="https://opencollective.com/stdlib">financially supporting stdlib</a>. We greatly appreciate your continued support!</p>
+</details>
+
 # Unlink
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
 > Remove a directory entry.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/fs-unlink
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-unlink = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-unlink@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var unlink = require( 'path/to/vendor/umd/fs-unlink/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/fs-unlink@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.unlink;
-})();
-</script>
+var unlink = require( '@stdlib/fs-unlink' );
 ```
 
 #### unlink( path, clbk )
@@ -147,12 +151,7 @@ if ( err instanceof Error ) {
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript">
-(function () {
+```javascript
 var join = require( 'path' ).join;
 var readFile = require( '@stdlib/fs-read-file' ).sync;
 var writeFile = require( '@stdlib/fs-write-file' ).sync;
@@ -175,18 +174,77 @@ unlink( dest );
 // Confirm that the temporary file no longer exists:
 console.log( exists( dest ) );
 // => false
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
 
 <!-- /.examples -->
 
+* * *
 
+<section class="cli">
+
+## CLI
+
+<section class="installation">
+
+## Installation
+
+To use as a general utility, install the CLI package globally
+
+```bash
+npm install -g @stdlib/fs-unlink-cli
+```
+
+</section>
+
+<!-- CLI usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```text
+Usage: unlink [options] <path>
+
+Options:
+
+  -h,    --help                Print this message.
+  -V,    --version             Print the package version.
+```
+
+</section>
+
+<!-- /.usage -->
+
+<section class="notes">
+
+### Notes
+
+-   Relative paths are resolved relative to the current working directory.
+-   Errors are written to `stderr`.
+
+</section>
+
+<!-- /.notes -->
+
+<section class="examples">
+
+### Examples
+
+<!-- run-disable -->
+
+```bash
+$ unlink ./examples/fixtures/file.txt
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.cli -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -241,8 +299,8 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/fs-unlink.svg
 [npm-url]: https://npmjs.org/package/@stdlib/fs-unlink
 
-[test-image]: https://github.com/stdlib-js/fs-unlink/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/fs-unlink/actions/workflows/test.yml?query=branch:main
+[test-image]: https://github.com/stdlib-js/fs-unlink/actions/workflows/test.yml/badge.svg?branch=v0.1.0
+[test-url]: https://github.com/stdlib-js/fs-unlink/actions/workflows/test.yml?query=branch:v0.1.0
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/fs-unlink/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/fs-unlink?branch=main
@@ -277,11 +335,11 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [node-fs]: https://nodejs.org/api/fs.html
 
-[@stdlib/fs/rmdir]: https://github.com/stdlib-js/fs-rmdir/tree/umd
+[@stdlib/fs/rmdir]: https://github.com/stdlib-js/fs-rmdir
 
 <!-- <related-links> -->
 
-[@stdlib/fs/exists]: https://github.com/stdlib-js/fs-exists/tree/umd
+[@stdlib/fs/exists]: https://github.com/stdlib-js/fs-exists
 
 <!-- </related-links> -->
 
