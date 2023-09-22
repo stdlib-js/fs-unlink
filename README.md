@@ -42,13 +42,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import unlink from 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-unlink@esm/index.mjs';
+import unlink from 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-unlink@v0.1.0-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { sync } from 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-unlink@esm/index.mjs';
+import { sync } from 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-unlink@v0.1.0-esm/index.mjs';
 ```
 
 #### unlink( path, clbk )
@@ -120,7 +120,7 @@ if ( err instanceof Error ) {
     <!-- run-disable -->
 
     ```javascript
-    import unlink from 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-unlink@esm/index.mjs';
+    import unlink from 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-unlink@v0.1.0-esm/index.mjs';
 
     // Explicitly handle the error...
     var err = unlink.sync( '/path/to/file.txt' );
