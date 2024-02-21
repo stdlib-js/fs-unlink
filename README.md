@@ -35,158 +35,19 @@ limitations under the License.
 
 > Remove a directory entry.
 
-<section class="installation">
 
-## Installation
 
-```bash
-npm install @stdlib/fs-unlink
-```
 
-Alternatively,
 
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
--   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
 
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
 
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
 
-</section>
 
-<section class="usage">
 
-## Usage
-
-```javascript
-var unlink = require( '@stdlib/fs-unlink' );
-```
-
-#### unlink( path, clbk )
-
-Asynchronously remove a directory entry specified by `path`.
-
-<!-- run-disable -->
-
-```javascript
-var join = require( 'path' ).join;
-var fpath = join( __dirname, 'examples', 'fixtures', 'file.txt' );
-
-unlink( fpath, done );
-
-function done( error ) {
-    if ( error ) {
-        throw error;
-    }
-}
-```
-
-#### unlink.sync( path )
-
-Synchronously removes a directory entry specified by `path`.
-
-<!-- run-disable -->
-
-```javascript
-var join = require( 'path' ).join;
-var fpath = join( __dirname, 'examples', 'fixtures', 'file.txt' );
-
-var err = unlink.sync( fpath );
-if ( err instanceof Error ) {
-    throw err;
-}
-```
-
-</section>
-
-<!-- /.usage -->
-
-<section class="notes">
-
-## Notes
-
--   If a provided `path` is a symbolic link, the function removes the symbolic link named by the `path` and does not affect any file or directory named by the contents of the symbolic link. Otherwise, the function removes the link named by the provided `path` and decrements the link count of the file referenced by the link. 
-
-    When a file's link count becomes `0` and no process has the file open, the space occupied by the file is freed and the file is no longer accessible. If one or more processes have the file open when the last link is removed, the link is removed before the function returns; however, the removal of file contents is postponed until all references to the file are closed.
-
-    If the `path` refers to a socket, FIFO, or device, processes which have the object open may continue to use it.
-
--   The path argument should **not** be a directory. To remove a directory, use [`rmdir()`][@stdlib/fs/rmdir].
-
--   The difference between `unlink.sync` and [`fs.unlinkSync()`][node-fs] is that [`fs.unlinkSync()`][node-fs] will throw if an `error` is encountered (e.g., if given a non-existent path) and this API will return an `error`. Hence, the following anti-pattern
-
-    <!-- run-disable -->
-
-    ```javascript
-    var fs = require( 'fs' );
-
-    // Check for path existence to prevent an error being thrown...
-    if ( fs.existsSync( '/path/to' ) ) {
-        fs.unlinkSync( '/path/to/file.txt' );
-    }
-    ```
-
-    can be replaced by an approach which addresses existence via `error` handling.
-
-    <!-- run-disable -->
-
-    ```javascript
-    var unlink = require( '@stdlib/fs-unlink' );
-
-    // Explicitly handle the error...
-    var err = unlink.sync( '/path/to/file.txt' );
-    if ( err instanceof Error ) {
-        // You choose what to do...
-        throw err;
-    }
-    ```
-
-</section>
-
-<!-- /.notes -->
-
-<section class="examples">
-
-## Examples
-
-<!-- eslint no-undef: "error" -->
-
-```javascript
-var join = require( 'path' ).join;
-var readFile = require( '@stdlib/fs-read-file' ).sync;
-var writeFile = require( '@stdlib/fs-write-file' ).sync;
-var exists = require( '@stdlib/fs-exists' ).sync;
-var unlink = require( '@stdlib/fs-unlink' ).sync;
-
-var src = join( __dirname, 'examples', 'fixtures', 'file.txt' );
-var dest = join( __dirname, 'examples', 'tmp.txt' );
-
-// Create a temporary file:
-writeFile( dest, readFile( src ) );
-
-// Confirm that the temporary file exists:
-console.log( exists( dest ) );
-// => true
-
-// Delete the temporary file:
-unlink( dest );
-
-// Confirm that the temporary file no longer exists:
-console.log( exists( dest ) );
-// => false
-```
-
-</section>
-
-<!-- /.examples -->
-
-* * *
 
 <section class="cli">
 
-## CLI
+
 
 <section class="installation">
 
@@ -204,7 +65,7 @@ npm install -g @stdlib/fs-unlink-cli
 
 <section class="usage">
 
-### Usage
+## Usage
 
 ```text
 Usage: unlink [options] <path>
@@ -221,7 +82,7 @@ Options:
 
 <section class="notes">
 
-### Notes
+## Notes
 
 -   Relative paths are resolved relative to the current working directory.
 -   Errors are written to `stderr`.
@@ -232,7 +93,7 @@ Options:
 
 <section class="examples">
 
-### Examples
+## Examples
 
 <!-- run-disable -->
 
@@ -252,10 +113,9 @@ $ unlink ./examples/fixtures/file.txt
 
 <section class="related">
 
-* * *
-
 ## See Also
 
+-   <span class="package-name">[`@stdlib/fs-unlink`][@stdlib/fs-unlink]</span><span class="delimiter">: </span><span class="description">remove a directory entry.</span>
 -   <span class="package-name">[`@stdlib/fs-exists`][@stdlib/fs/exists]</span><span class="delimiter">: </span><span class="description">test whether a path exists on the filesystem.</span>
 
 </section>
@@ -275,7 +135,7 @@ This package is part of [stdlib][stdlib], a standard library for JavaScript and 
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
-#### Community
+### Community
 
 [![Chat][chat-image]][chat-url]
 
@@ -298,8 +158,8 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <section class="links">
 
-[npm-image]: http://img.shields.io/npm/v/@stdlib/fs-unlink.svg
-[npm-url]: https://npmjs.org/package/@stdlib/fs-unlink
+[npm-image]: http://img.shields.io/npm/v/@stdlib/fs-unlink-cli.svg
+[npm-url]: https://npmjs.org/package/@stdlib/fs-unlink-cli
 
 [test-image]: https://github.com/stdlib-js/fs-unlink/actions/workflows/test.yml/badge.svg?branch=v0.2.1
 [test-url]: https://github.com/stdlib-js/fs-unlink/actions/workflows/test.yml?query=branch:v0.2.1
