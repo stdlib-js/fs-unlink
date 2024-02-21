@@ -161,16 +161,16 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/fs-unlink-cli.svg
 [npm-url]: https://npmjs.org/package/@stdlib/fs-unlink-cli
 
-[test-image]: https://github.com/stdlib-js/fs-unlink/actions/workflows/test.yml/badge.svg?branch=v0.2.1
-[test-url]: https://github.com/stdlib-js/fs-unlink/actions/workflows/test.yml?query=branch:v0.2.1
+[test-image]: https://github.com/stdlib-js/fs-unlink@v0.2.1/actions/workflows/test.yml/badge.svg?branch=v0.2.1
+[test-url]: https://github.com/stdlib-js/fs-unlink@v0.2.1/actions/workflows/test.yml?query=branch:v0.2.1
 
-[coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/fs-unlink/main.svg
-[coverage-url]: https://codecov.io/github/stdlib-js/fs-unlink?branch=main
+[coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/fs-unlink@v0.2.1/main.svg
+[coverage-url]: https://codecov.io/github/stdlib-js/fs-unlink@v0.2.1?branch=main
 
 <!--
 
-[dependencies-image]: https://img.shields.io/david/stdlib-js/fs-unlink.svg
-[dependencies-url]: https://david-dm.org/stdlib-js/fs-unlink/main
+[dependencies-image]: https://img.shields.io/david/stdlib-js/fs-unlink@v0.2.1.svg
+[dependencies-url]: https://david-dm.org/stdlib-js/fs-unlink@v0.2.1/main
 
 -->
 
@@ -181,22 +181,22 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
 
-[cli-section]: https://github.com/stdlib-js/fs-unlink#cli
-[cli-url]: https://github.com/stdlib-js/fs-unlink/tree/cli
-[@stdlib/fs-unlink]: https://github.com/stdlib-js/fs-unlink/tree/main
+[cli-section]: https://github.com/stdlib-js/fs-unlink@v0.2.1#cli
+[cli-url]: https://github.com/stdlib-js/fs-unlink@v0.2.1/tree/cli
+[@stdlib/fs-unlink]: https://github.com/stdlib-js/fs-unlink@v0.2.1/tree/main
 
 [umd]: https://github.com/umdjs/umd
 [es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 
-[deno-url]: https://github.com/stdlib-js/fs-unlink/tree/deno
-[deno-readme]: https://github.com/stdlib-js/fs-unlink/blob/deno/README.md
-[umd-url]: https://github.com/stdlib-js/fs-unlink/tree/umd
-[umd-readme]: https://github.com/stdlib-js/fs-unlink/blob/umd/README.md
-[esm-url]: https://github.com/stdlib-js/fs-unlink/tree/esm
-[esm-readme]: https://github.com/stdlib-js/fs-unlink/blob/esm/README.md
-[branches-url]: https://github.com/stdlib-js/fs-unlink/blob/main/branches.md
+[deno-url]: https://github.com/stdlib-js/fs-unlink@v0.2.1/tree/deno
+[deno-readme]: https://github.com/stdlib-js/fs-unlink@v0.2.1/blob/deno/README.md
+[umd-url]: https://github.com/stdlib-js/fs-unlink@v0.2.1/tree/umd
+[umd-readme]: https://github.com/stdlib-js/fs-unlink@v0.2.1/blob/umd/README.md
+[esm-url]: https://github.com/stdlib-js/fs-unlink@v0.2.1/tree/esm
+[esm-readme]: https://github.com/stdlib-js/fs-unlink@v0.2.1/blob/esm/README.md
+[branches-url]: https://github.com/stdlib-js/fs-unlink@v0.2.1/blob/main/branches.md
 
-[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/fs-unlink/main/LICENSE
+[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/fs-unlink@v0.2.1/main/LICENSE
 
 [node-fs]: https://nodejs.org/api/fs.html
 
