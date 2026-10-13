@@ -26,7 +26,7 @@ var resolve = require( 'path' ).resolve;
 var readFileSync = require( '@stdlib/fs-read-file' ).sync;
 var CLI = require( '@stdlib/cli-ctor' );
 var cwd = require( '@stdlib/process-cwd' );
-var unlink = require( './../lib' );
+var unlink = require( '@stdlib/fs-unlink' );
 
 
 // MAIN //
