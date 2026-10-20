@@ -35,33 +35,38 @@ limitations under the License.
 
 > Remove a directory entry.
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/fs-unlink
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
--   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var unlink = require( '@stdlib/fs-unlink' );
+unlink = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-unlink@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var unlink = require( 'path/to/vendor/umd/fs-unlink/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/fs-unlink@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.unlink;
+})();
+</script>
 ```
 
 #### unlink( path, clbk )
@@ -153,7 +158,12 @@ if ( err instanceof Error ) {
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript">
+(function () {
 var join = require( 'path' ).join;
 var readFile = require( '@stdlib/fs-read-file' ).sync;
 var writeFile = require( '@stdlib/fs-write-file' ).sync;
@@ -176,77 +186,18 @@ unlink( dest );
 // Confirm that the temporary file no longer exists:
 console.log( exists( dest ) );
 // => false
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
 
 <!-- /.examples -->
 
-* * *
 
-<section class="cli">
-
-## CLI
-
-<section class="installation">
-
-## Installation
-
-To use as a general utility, install the CLI package globally
-
-```bash
-npm install -g @stdlib/fs-unlink-cli
-```
-
-</section>
-
-<!-- CLI usage documentation. -->
-
-<section class="usage">
-
-### Usage
-
-```text
-Usage: unlink [options] <path>
-
-Options:
-
-  -h,    --help                Print this message.
-  -V,    --version             Print the package version.
-```
-
-</section>
-
-<!-- /.usage -->
-
-<section class="notes">
-
-### Notes
-
--   Relative paths are resolved relative to the current working directory.
--   Errors are written to `stderr`.
-
-</section>
-
-<!-- /.notes -->
-
-<section class="examples">
-
-### Examples
-
-<!-- run-disable -->
-
-```bash
-$ unlink ./examples/fixtures/file.txt
-```
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.cli -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -340,11 +291,11 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 [node-fs]: https://nodejs.org/api/fs.html
 
-[@stdlib/fs/rmdir]: https://github.com/stdlib-js/fs-rmdir
+[@stdlib/fs/rmdir]: https://github.com/stdlib-js/fs-rmdir/tree/umd
 
 <!-- <related-links> -->
 
-[@stdlib/fs/exists]: https://github.com/stdlib-js/fs-exists
+[@stdlib/fs/exists]: https://github.com/stdlib-js/fs-exists/tree/umd
 
 <!-- </related-links> -->
 
